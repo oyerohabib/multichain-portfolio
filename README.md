@@ -100,22 +100,6 @@ pnpm exec playwright install chromium
 
 E2E specs mock `/api/portfolio` and `/api/activity` so runs stay fast and don’t depend on Alchemy.
 
-## CI
-
-GitHub Actions (`.github/workflows/ci.yml`) runs on pushes to `main`/`master` and on pull requests:
-
-1. **Lint, typecheck & unit tests**
-2. **Production build** (placeholder env vars)
-3. **Playwright e2e** (Chromium; uploads report on failure)
-
-## What this demonstrates (interview angle)
-
-1. **Data-heavy UI** — multi-chain balances, caching, loading/error/empty states
-2. **Wallet UX** — RainbowKit connect + watch-only addresses + network mode
-3. **Transaction lifecycle** — typed Zustand state machine with simulate-before-send
-4. **Secure API boundary** — Alchemy key never ships to the browser for portfolio reads
-5. **Testability** — unit tests for lifecycle transitions + Playwright smoke for watch/toggle flow
-
 ## Out of scope (v1)
 
 Solana, NFTs, DeFi positions, Storybook, user accounts / persistence beyond client cache.
