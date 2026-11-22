@@ -1,4 +1,6 @@
-# Multichain Portfolio
+# <img src="public/logo.png" alt="Multichain Portfolio logo" width="40" height="40" align="left" /> Multichain Portfolio
+
+<br clear="left" />
 
 Portfolio-ready EVM frontend that connects a wallet **or** watches a pasted address, shows balances across **Ethereum, Base, and Optimism** (or their Sepolia testnets), and ships a full **send transaction lifecycle** (simulate → sign → pending → confirmed / failed / replaced).
 
