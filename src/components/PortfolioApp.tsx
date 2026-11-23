@@ -41,8 +41,8 @@ export function PortfolioApp() {
   const watchingDemo = address?.toLowerCase() === DEMO_WATCH_ADDRESS.toLowerCase();
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
-      <header className="flex flex-col gap-4 border-b border-[var(--border)] pb-6">
+    <div className="mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+      <header className="flex shrink-0 flex-col gap-4 border-b border-[var(--border)] pb-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-medium tracking-[0.18em] text-teal-800 uppercase">
@@ -60,11 +60,11 @@ export function PortfolioApp() {
       <TxStatus />
 
       {!address ? (
-        <section className="rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] p-10 text-center">
-          <p className="font-display text-2xl text-[var(--ink)]">
+        <section className="flex flex-1 flex-col items-center justify-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] px-6 py-12 text-center">
+          <p className="font-display text-2xl text-[var(--ink)] sm:text-3xl">
             Start with a wallet or a watch address
           </p>
-          <p className="mx-auto mt-2 max-w-md text-sm text-[var(--muted)]">
+          <p className="mx-auto mt-3 max-w-md text-sm text-[var(--muted)]">
             Connect a wallet, paste any 0x address, or hit{" "}
             <strong>Try Vitalik’s address</strong> for a mainnet demo. Toggle{" "}
             <strong>Testnet</strong> for Sepolia with faucet ETH.
