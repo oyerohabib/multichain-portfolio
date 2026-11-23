@@ -66,7 +66,7 @@ export function NetworkModeToggle({ disabled = false }: Props) {
               aria-pressed={active}
               disabled={disabled}
               onClick={() => onSelect(option.value)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition disabled:cursor-wait ${
+              className={`cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition disabled:cursor-wait ${
                 active
                   ? "bg-teal-800 text-white"
                   : "text-[var(--muted)] hover:text-[var(--ink)]"
@@ -84,7 +84,7 @@ export function NetworkModeToggle({ disabled = false }: Props) {
           data-testid="switch-wallet-sepolia"
           onClick={() => void switchWalletToSepolia()}
           disabled={isPending}
-          className="rounded-md border border-teal-800/40 bg-teal-800/10 px-2.5 py-1 text-xs font-medium text-teal-900 transition hover:bg-teal-800/15 disabled:opacity-60"
+          className="cursor-pointer rounded-md border border-teal-800/40 bg-teal-800/10 px-2.5 py-1 text-xs font-medium text-teal-900 transition hover:bg-teal-800/15 disabled:cursor-wait disabled:opacity-60"
         >
           {isPending ? "Switching…" : "Switch wallet to Sepolia"}
         </button>
