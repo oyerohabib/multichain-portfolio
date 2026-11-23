@@ -109,12 +109,12 @@ export function AddressBar() {
         </div>
       </div>
 
-      <div className="flex shrink-0 items-start gap-3 self-stretch sm:self-start">
+      <div className="flex shrink-0 items-center gap-3 self-start">
         {watchAddress ? (
-          <div className="flex items-center gap-1.5">
+          <div className="relative inline-flex">
             <span
               data-testid="watching-address"
-              className="rounded-md bg-teal-700/10 px-2 py-1 font-mono text-sm text-teal-800"
+              className="inline-flex h-10 items-center rounded-md bg-teal-700/10 px-2.5 pr-3.5 font-mono text-sm text-teal-800"
             >
               Watching {shortenAddress(watchAddress)}
             </span>
@@ -124,9 +124,9 @@ export function AddressBar() {
               onClick={() => setWatchAddress(null)}
               aria-label="Clear watched address"
               title="Clear watched address"
-              className="inline-flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition hover:border-teal-800/40 hover:text-teal-900"
+              className="absolute -top-1.5 -right-1.5 inline-flex h-5 w-5 cursor-pointer items-center justify-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] shadow-sm transition hover:border-teal-800/40 hover:text-teal-900"
             >
-              <ClearIcon className="h-3.5 w-3.5" />
+              <ClearIcon className="h-2.5 w-2.5" />
             </button>
           </div>
         ) : null}
